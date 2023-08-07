@@ -1,35 +1,32 @@
-﻿namespace Question4
+﻿// C# Program to find maximum in arr[]
+using System;
+
+class ArraySum
 {
-    internal class Program
+
+    static int[] arr = { 10, 10324, 45, 90, 9808 };
+
+    // Method to find maximum in arr[]
+    static int largest()
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Enter any number");
-            string input = Console.ReadLine();
-            int num = Convert.ToInt32(input);
+        int i;
 
-            int digit = 0;
-            int sum = 0;
-            int[] a = new int[0] { };
+        // Initialize maximum element
+        int max = arr[0];
 
-            int count = 0;
+        // Traverse array elements from second and
+        // compare every element with current max
+        for (i = 1; i < arr.Length; i++)
+            if (arr[i] > max)
+                max = arr[i];
 
-            for (int i = 0; i < input.Length; i++)
-            {
-                count++;
-                Console.WriteLine(a[count]);
-            }
+        return max;
+    }
 
-            while (num > 0)
-            {
-                digit = num % 10;
-                Console.WriteLine( digit);
-                num = (num - digit) / 10;
-                
-            }
-
-            Console.WriteLine( a);
-            Console.ReadKey();
-        }
+    // Driver code
+    public static void Main()
+    {
+        Console.WriteLine("Largest in given "
+                          + "array is " + largest());
     }
 }
