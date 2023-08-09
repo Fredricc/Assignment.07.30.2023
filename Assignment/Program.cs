@@ -4,18 +4,23 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Sum of all even numbers from 1 to 100");
-            int sum = 0;
-            for(int i = 0; i <= 100;  i++)
+
+            Console.WriteLine("Enter a number");
+            string? number = Console.ReadLine();
+
+            int count = number.Length;
+
+            Console.WriteLine($"Length of the number is {count}");
+            int num = (Convert.ToInt32(number));
+            if (num > 0)
             {
-                if(i%2 == 0)
-                {
-                    Console.Write($" {i}");
-                    sum += i;
-                }
+                Console.WriteLine("Number is positive");
             }
-            Console.WriteLine();
-            Console.WriteLine($"Sum is of the above even numbers is {sum}");
+            else
+            {
+                Console.WriteLine("Number is negative");
+            }
+
         }
     }
 }
