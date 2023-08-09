@@ -4,18 +4,18 @@
     {
         static void Main(string[] args)
         {
-            int number;
-            Console.WriteLine( "Enter a number");
-            number = Convert.ToInt32(Console.ReadLine() );
-
-            Console.WriteLine("Factors of {0} ", number );
-            for(int divisor = 1; divisor <= number; divisor++) 
+            Console.WriteLine("Sum of all even numbers from 1 to 100");
+            int sum = 0;
+            for(int i = 0; i <= 100;  i++)
             {
-                if( number % divisor == 0 )
+                if(i%2 == 0)
                 {
-                    Console.Write("{0}, " , divisor );
+                    Console.Write($" {i}");
+                    sum += i;
                 }
             }
+            Console.WriteLine();
+            Console.WriteLine($"Sum is of the above even numbers is {sum}");
         }
     }
 }
